@@ -1,10 +1,10 @@
-#Findsploit v1.4 
-by 1N3 @CrowdShield - https://crowdshield.com
+# Findsploit by @xer0dayz
+https://xerosecurity.com
+
+![alt tag](https://github.com/1N3/Findsploit/blob/master/findsploit.png)
 
 ### ABOUT
-Finsploit is a simple bash script to quickly and easily search both local and online exploit databases. This repository also includes "copysploit" to copy any exploit-db exploit to the current directory and "compilesploit" to automatically compile and run any C exploit (ie. ./copysploit 1337.c && ./compilesploit 1337.c).
-
-For updates to this script, use git clone https://github.com/1N3/Findsploit.git
+Findsploit is a simple bash script to quickly and easily search both local and online exploit databases. This repository also includes "copysploit" to copy any exploit-db exploit to the current directory and "compilesploit" to automatically compile and run any C exploit (ie. ./copysploit 1337.c && ./compilesploit 1337.c).
 
 ### INSTALLATION
 ```
@@ -13,37 +13,43 @@ For updates to this script, use git clone https://github.com/1N3/Findsploit.git
 
 ### USAGE
 ```
-root@kali:/# findsploit heartbleed
+Search for all exploits and modules using a single search term:
+*  findsploit <search_term_1> (ie. findsploit apache)
 
-   ___ _           _           _       _ _   
-  / __(_)_ __   __| |___ _ __ | | ___ (_) |_ 
- / _\ | | '_ \ / _` / __| '_ \| |/ _ \| | __|
-/ /   | | | | | (_| \__ \ |_) | | (_) | | |_ 
-\/    |_|_| |_|\__,_|___/ .__/|_|\___/|_|\__|
-                        |_|                  
+Search multiple search terms:
+*  findsploit <search_term_1> <search_term_2> <search_term_3> ...
 
-+ -- --=[findsploit v1.4 by 1N3
-+ -- --=[https://crowdshield.com
+Show all NMap scripts:
+*  findsploit nmap 
 
-+ -- --=[SEARCHING:  heartbleed   
+Search for all FTP NMap scripts:
+*  findsploit nmap | grep ftp
 
-+ -- --=[NMAP SCRIPTS
+Show all Metasploit auxiliary modules:
+*  findsploit auxiliary
 
-/usr/share/nmap/scripts/ssl-heartbleed.nse
+Show all Metasploit exploits:
+*  findsploit exploits
 
-+ -- --=[METASPLOIT EXPLOITS
+Show all Metasploit encoder modules:
+*  findsploit encoder
 
-msf_search/auxiliary:   scanner/ssl/openssl_heartbleed                                 2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Information Leak
-msf_search/auxiliary:   server/openssl_heartbeat_client_memory                         2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Client Memory Exposure
+Show all Metasploit payloads modules:
+*  findsploit payloads
 
-+ -- --=[EXPLOITDB EXPLOITS
-
- Description                                                                 Path
---------------------------------------------------------------------------- -------------------------
-Heartbleed OpenSSL - Information Leak Exploit (1)                           /multiple/remote/32791.c
-Heartbleed OpenSSL - Information Leak Exploit (2) - DTLS Support            /multiple/remote/32998.c
-
-+ -- --=[Press any key to search online or Ctrl+C to exit...
+Search all Metasploit payloads for windows only payloads:
+*  findsploit payloads | grep windows
 ```
 
+## UPDATE:
+To update exploit-db and check for new versions of findsploit, run ```findsploit --update```
 
+## LICENSE:
+This software is free to distribute, modify and use with the condition that credit is provided to the creator (1N3@CrowdShield) and is not for commercial use.
+
+## DONATIONS:
+Donations are welcome. This will help facilitate improved features, frequent updates and better overall support.
+- [x] BTC 1Fav36btfmdrYpCAR65XjKHhxuJJwFyKum
+- [x] DASH XoWYdMDGb7UZmzuLviQYtUGb5MNXSkqvXG
+- [x] ETH 0x20bB09273702eaBDFbEE9809473Fd04b969a794d
+- [x] LTC LQ6mPewec3xeLBYMdRP4yzeta6b9urqs2f
